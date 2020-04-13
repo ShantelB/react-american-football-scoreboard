@@ -17,12 +17,12 @@ function App() {
             <h2 className="home__name">Lions</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
-            <div className="home__score" {...() => setLions(0)}></div>
+            <div className="home__score" onClick = {() => setLions(0)}></div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score"{...() => setTigers(0)}></div>
+            <div className="away__score" onClick = {() => setTigers(0)}></div>
           </div>
         </div>
         <BottomRow />
@@ -31,12 +31,12 @@ function App() {
         <div className="homeButtons">
 
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick {...() => {setLions(lions + 7)}}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick {...() => {setLions(lions + 1)}}>Home Field Goal</button>
+          <button className="homeButtons__touchdown" onClick = {() => setLions(lions + 7)}>Home Touchdown</button>
+          <button className="homeButtons__fieldGoal" onClick = {() => setLions(lions + 3)}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick {...() => {setTigers(tigers + 7)}}>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick {...() => {setTigers(tigers + 1)}}>Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick = {() => setTigers(tigers + 7)}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick = {() => setTigers(tigers + 3)}>Away Field Goal</button>
         </div>
       </section>
     </div>
